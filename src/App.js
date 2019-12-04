@@ -1,6 +1,7 @@
 import React ,{Component} from 'react';
-import Header from './componentes/Header.js'
-import AgregarCitas from './componentes/AgregarCitas.js'
+import Header from './componentes/Header.js';
+import AgregarCitas from './componentes/AgregarCitas.js';
+import ListasCitas from './componentes/ListasCitas.js';
 
 
 class App extends Component{
@@ -28,6 +29,11 @@ class App extends Component{
           <div className="col-md-6">
             <AgregarCitas 
               crearCita={this.crearCita}
+            />
+          </div>
+          <div className="col-md-6">
+            <ListasCitas
+              citas={this.state.citas}
             />
           </div>
         </div>
