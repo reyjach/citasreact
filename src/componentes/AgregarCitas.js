@@ -15,6 +15,8 @@ class AgregarCita extends Component {
 
     crearNuevaCita = e => {
 
+        e.preventDefault();
+
         const mascota = this.nombreMascotaRef.current.value,
               propietario = this.propietarioRef.current.value,
               fecha = this.fechaRef.current.value,
@@ -30,9 +32,10 @@ class AgregarCita extends Component {
             sintoma
         }
 
-        e.preventDefault();
+        
         
         this.props.crearCita(nuevaCita);
+        e.currentTarget.reset();
     }
 
     render() {
