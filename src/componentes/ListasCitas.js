@@ -18,6 +18,7 @@ class ListasCitas extends Component {
                             <Citas 
                                 key={cita}
                                 info={this.props.citas[cita]}
+                                borrarCita={this.props.borrarCita}
                             />
                         ))}
                     </div>
